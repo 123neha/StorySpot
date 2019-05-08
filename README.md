@@ -11,6 +11,7 @@ To setup the entire application,
 6. run `npm i`
 7. make sure `mongod` is running
 8. run `npm start`
+## Now go to browser and open `http://localhost:4200`
 
 ## Run Unit Test cases (for Backend APIs only)
 1. run command `np run test`

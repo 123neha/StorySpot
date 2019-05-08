@@ -18,8 +18,27 @@ mat-toolbar-row {
     height: 560px;
 }
 
-.mat-sidenav-content {
+.mat-sidenav-content,.main-container {
     padding: 25px;
+}
+
+.example-card {
+  width: 50%;
+}
+
+.table .thead-light th {
+  color: #fff;
+  background-color: #c2185b;
+  border-spacing: 0;
+}
+
+.table-bordered {
+  border-spacing: 0;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border-spacing: 0;
 }
 
 .table {
@@ -40,6 +59,15 @@ mat-toolbar-row {
   border-bottom: 1px solid #eaedea;
 }
 
+.table thead th {
+  vertical-align: bottom;
+  border-spacing: 0;
+}
+
+.table tbody + tbody {
+  border-spacing: 0;
+}
+
 .table .table {
   background-color: #fff;
 }
@@ -48,12 +76,40 @@ mat-toolbar-row {
   text-align:left
 }
 
+.margin-10 {
+  margin: 0px 0 0 10px !important;
+}
+
 .right {
   float:right;
 }
 
+textarea {
+  border: 1px solid #eaedea !important;
+  background-color:#f7f9f7 !important;
+}
+
+.address {
+  width: 350px;
+  height: 100px;
+}
+
+.mat-drawer-container {
+  background-color:#f7f9f7;
+  color: #424242;
+}
+
+.mat-drawer {
+  background-color: #c2185b;
+  /* color: #424242; */
+}
+
 .mat-list-base .mat-list-item {
   color:#fff;
+}
+
+.mat-select-value, .mat-select-arrow {
+  color:#424242;
 }
 
 .table td {
@@ -64,6 +120,23 @@ mat-toolbar-row {
 .table td:first-child { 
   color:#424242; 
   border-right: 1px solid #eaedea;
+}
+
+.right.mat-icon-button {
+  border: 1px solid #eaedea !important;
+  margin-bottom: 10px !important;
+}
+
+.right .mat-icon {
+  padding-bottom: 6px;
+}
+
+.right.mat-icon-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.one-edge-shadow {
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .mat-menu-item {

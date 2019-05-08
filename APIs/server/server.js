@@ -13,7 +13,7 @@ const options = { promiseLibrary: global.Promise, useNewUrlParser: true };
 mongoose.connect(url, options);
 mongoose.set('useCreateIndex', true);
 
-mongoose.connection.on('connected', function () {
+mongoose.connection.on('connected', () => {
   console.log(`Mongoose connected to: ${url}`);
 });
 
@@ -31,7 +31,7 @@ app.use(cors({
   origin: [true]
 }));
 
-app.get('/', (req, res) => res.json({ message: "Welcome to Story Spot APIs" }));
+app.get('/', (req, res) => res.json({ message: 'Welcome to Story Spot APIs' }));
 app.use('/v1/api', routes);
 
 module.exports = app;
