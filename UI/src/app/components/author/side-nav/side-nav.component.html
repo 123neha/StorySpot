@@ -1,0 +1,24 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened role="navigation" autosize>
+    <mat-nav-list>
+
+      <a mat-list-item routerLink="/home">
+        <button mat-icon-button>
+          <mat-icon>home</mat-icon>
+        </button>
+        Home
+      </a>
+
+      <a mat-list-item routerLink="/home/drafts">
+        <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+        My drafts
+      </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

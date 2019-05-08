@@ -1,0 +1,92 @@
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+  
+mat-card {
+    max-width: 80%;
+    margin: 2em auto;
+    text-align: center;
+}
+  
+mat-toolbar-row {
+    justify-content: space-between;
+}
+  
+.example-container {
+    height: 560px;
+}
+
+.mat-sidenav-content {
+    padding: 25px;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  text-align: center;
+  font-family: lintel;
+  vertical-align: top;
+  border-spacing: 0;
+  border-bottom: 1px solid #eaedea;
+}
+
+.table .table {
+  background-color: #fff;
+}
+
+.left td {
+  text-align:left
+}
+
+.right {
+  float:right;
+}
+
+.mat-list-base .mat-list-item {
+  color:#fff;
+}
+
+.table td {
+  background-color: #fff;
+  color: black;
+}
+
+.table td:first-child { 
+  color:#424242; 
+  border-right: 1px solid #eaedea;
+}
+
+.mat-menu-item {
+  line-height: 30px !important;
+  height:30px !important;
+  padding :0 10px !important;
+}
+
+.disabled {
+  color: #050505;
+  cursor: default;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.pagination li{
+ display: inline;
+ cursor: pointer;
+ padding-left: 10px; 
+}
+
+.story mat-card{
+  max-width: 100%;
+  margin: .2em auto;
+}

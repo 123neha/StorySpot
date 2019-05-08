@@ -1,0 +1,43 @@
+<div>
+  <div class="left">
+    My Drafts
+  </div>
+  <div class="right" *ngIf="drafts && drafts.length> 0">
+    <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+      <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <button mat-icon-button (click)="getDrafts(pager.currentPage - 1)">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </li>
+      <li (click)="getDrafts(page)" *ngFor="let page of pager.pages">
+        <a>{{page}}</a>
+      </li>
+      <li [class.disabled]="pager.currentPage === pager.totalPages">
+        <button mat-icon-button (click)="getDrafts(pager.currentPage + 1)">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </li>
+    </ul>
+    <input placeholder="Search here.." [(ngModel)]="draftSearch" name="draftSearch">
+  </div>
+  <div class="left">
+    <button mat-raised-button color="accent"><mat-icon>add</mat-icon>Create New</button>
+  </div>
+
+  <table class="table story">
+    <tr *ngFor="let draft of drafts | searchText:draftSearch:['title','content'] let i = index">
+      <td>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{draft.title}}</mat-card-title>
+            <mat-icon>edit</mat-icon>
+            <mat-icon>delete</mat-icon>
+          </mat-card-header>
+          <mat-card-content>
+            {{draft.content}}
+          </mat-card-content>
+        </mat-card>
+      </td>
+    </tr>
+  </table>
+</div>

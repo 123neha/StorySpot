@@ -1,0 +1,40 @@
+<div>
+  <div class="left">
+    Stories
+  </div>
+  <div class="right" *ngIf="stories && stories.length> 0">
+    <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+      <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <button mat-icon-button (click)="getStories(pager.currentPage - 1)">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </li>
+      <li (click)="getStories(page)" *ngFor="let page of pager.pages">
+        <a>{{page}}</a>
+      </li>
+      <li [class.disabled]="pager.currentPage === pager.totalPages">
+        <button mat-icon-button (click)="getStories(pager.currentPage + 1)">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </li>
+    </ul>
+
+    <input placeholder="Search here.." [(ngModel)]="storySearch" name="storySearch">
+  </div>
+
+  <table class="table story">
+    <tr *ngFor="let story of stories | searchText:storySearch:['title','content'] let i = index">
+      <td>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{story.title}}</mat-card-title>
+            <mat-card-subtitle>By: {{story.createdBy?.firstName}} {{story.createdBy?.lastName}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            {{story.content}}
+          </mat-card-content>
+        </mat-card>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+<div>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>StorySpot</span>
+
+      <button mat-icon-button [mat-menu-trigger-for]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item routerLink='/login'>logout</button>
+  </mat-menu>
+  
+  <router-outlet></router-outlet>
+</div>

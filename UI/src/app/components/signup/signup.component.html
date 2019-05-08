@@ -1,0 +1,45 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Sign Up</mat-card-title>
+  </mat-card-header>
+  <div>
+    <form #registerForm="ngForm" class="example-form" (ngSubmit)="signup()">
+      <mat-card-content>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="First Name" [(ngModel)]="model.firstName" name="firstName" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Last Name" [(ngModel)]="model.lastName" name="lastName" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" [(ngModel)]="model.email" name="email" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" [(ngModel)]="model.password" type="password" name="password"
+                  required>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.form.valid">Sign Up</button>
+      </mat-card-actions>
+    </form>
+  </div>
+</mat-card>
